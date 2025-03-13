@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 11:15:12 by aaydogdu          #+#    #+#             */
-/*   Updated: 2025/03/12 08:31:33 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2025/03/12 10:04:26 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,12 @@ void	print_error2(char *message, int fd)
 {
 	ft_putstr_fd(message, fd);
 	exit (1);
+}
+
+void	f_c_v(char *line_map, char **line_vector, int fd)
+{
+	if (line_map)
+		free(line_map);
+	get_next_line(fd, 1);
+	free_map(line_vector);
 }

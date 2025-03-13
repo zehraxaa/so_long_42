@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 17:32:01 by aaydogdu          #+#    #+#             */
-/*   Updated: 2025/03/12 09:28:55 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2025/03/12 10:03:25 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,7 @@ static void	create_map_vector(t_game *game, int fd, int height)
 		line_vector[i] = ft_substr(line_map, 0, line_len(line_map));
 		if ((i == height - 1) && (line_map[ft_strlen(line_map) - 1] == '\n'))
 		{
-			if(line_map)
-				free(line_map);
-			get_next_line(fd, 1);
-			free_map(line_vector);
+			f_c_v(line_map, line_vector, 1);
 			print_error("Error\nincorrect character at the end\n", game);
 		}
 		free(line_map);

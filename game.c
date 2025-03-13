@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 17:53:10 by aaydogdu          #+#    #+#             */
-/*   Updated: 2025/03/12 08:37:47 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2025/03/12 10:00:26 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,13 @@ void	move_player(t_game *game, int step_x, int step_y)
 			game->map->vector[(game->player).y][(game->player).x] = FLOOR;
 			game->map->vector[(game->exit).y][(game->exit).x] = EXIT;
 		}
-			game->map->vector[(game->player).y + step_y][(game->player).x
-				+ step_x] = PLAYER;
+		game->map->vector[(game->player).y + step_y][(game->player).x
+			+ step_x] = PLAYER;
 		game->player.x = game->player.x + step_x;
 		game->player.y = game->player.y + step_y;
 	}
-		if ((next == EXIT) && (game->collectible_count == 0))
-			close_game_for_move(game);
+	if ((next == EXIT) && (game->collectible_count == 0))
+		close_game_for_move(game);
 }
 
 int	key_handler(int keycode, t_game *game)

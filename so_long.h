@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 08:50:36 by aaydogdu          #+#    #+#             */
-/*   Updated: 2025/03/13 08:14:13 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2025/03/12 10:03:54 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include "./minilibx-linux/mlx.h"
 # include <errno.h>
 # include <fcntl.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -104,6 +105,7 @@ int		ber_check(char *file_name);
 void	free_map(char **map);
 void	print_error(char *message, t_game *game);
 void	print_error2(char *message, int fd);
+void	f_c_v(char *line_map, char **line_vector, int i);
 
 int		close_game(t_game *game);
 void	move_player(t_game *game, int step_x, int step_y);

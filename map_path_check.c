@@ -6,7 +6,7 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 15:41:51 by aaydogdu          #+#    #+#             */
-/*   Updated: 2025/03/13 08:15:01 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2025/03/12 08:28:44 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	is_path_valid(t_game *game)
 	while (i < game->map->height)
 	{
 		j = 0;
-		while (j < game->map->width)
+		while (j < game ->map->width)
 		{
 			if ((copied_vector[i][j] == EXIT)
 				|| (copied_vector[i][j] == COLLECTIBLE))

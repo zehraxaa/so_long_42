@@ -93,9 +93,9 @@ char	*get_next_line(int fd, int i)
 	char		*buffer;
 	static char	*str;
 
-	if(i == 1)
+	if (i == 1)
 	{
-		if(str)
+		if (str)
 			free(str);
 		return (0);
 	}
